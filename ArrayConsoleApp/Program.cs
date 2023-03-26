@@ -1,2 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿var array = new Array.Array();
+array.Add("İlayda");
+array.Add("Alp");
+
+Console.WriteLine(array.Count);
+Console.Read();
