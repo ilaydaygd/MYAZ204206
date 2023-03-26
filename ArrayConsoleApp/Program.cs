@@ -1,11 +1,45 @@
-﻿var array = new Array.Array();
+﻿
+// overloading 
+var names = new Array.Array("Ahmet", "Mehmet", "Büşra", "Can", "Burcu");
 
-array.Add("İlayda");   //0   Capacity 4
-array.Add("Alp");      //1   Capacity 4
-array.Add("Can");      //2   Capacity 4
-array.Add("Filiz");    //3   Capacity 4
-array.Add("Furkan");   //4   Capacity 8
+names.SetItem(1, "Melike");
 
+foreach (var name in names)
+{
+    Console.WriteLine(name);
+}
+
+var numbers = new int[] { 1, 2, 3 };
+numbers[0] = 10;
+
+
+foreach (var number in numbers)
+{
+    Console.WriteLine(number);
+}
+
+Console.ReadKey();
+#region week-01
+// array bir instance (örnektir)
+var array = new Array.Array();
+
+
+array.Add("Ahmet");     // 0    4
+array.Add("Mehmet");    // 1    4
+array.Add("Can");       // 2    4
+array.Add("Filiz");     // 3    4
+array.Add("Furkan");    // 4    8
+
+Console.WriteLine(array.GetItem(array.Find("Can"))); ;
+
+foreach (var item in array)
+{
+    Console.WriteLine(item);
+}
+
+// _InnerArray[0]
 
 Console.WriteLine(array.Count);
+Console.WriteLine(array.GetItem(3));
 Console.Read();
+#endregion
