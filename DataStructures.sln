@@ -3,19 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayConsoleApp", "ArrayConsoleApp\ArrayConsoleApp.csproj", "{B55B84B5-9DDE-496D-A056-40AFFE94DCC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArrayConsoleApp", "ArrayConsoleApp\ArrayConsoleApp.csproj", "{B55B84B5-9DDE-496D-A056-40AFFE94DCC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayTests", "ArrayTests\ArrayTests.csproj", "{60D6DC78-3E27-43F2-B79A-0DAC55495708}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArrayTests", "ArrayTests\ArrayTests.csproj", "{60D6DC78-3E27-43F2-B79A-0DAC55495708}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Array", "Array\Array.csproj", "{53CF9163-9EFF-4F31-AFFC-BD4935471724}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Array", "Array\Array.csproj", "{53CF9163-9EFF-4F31-AFFC-BD4935471724}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionConsoleApp", "CollectionConsoleApp\CollectionConsoleApp.csproj", "{19748733-31D9-4381-8B76-8CAE12765F37}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CollectionConsoleApp", "CollectionConsoleApp\CollectionConsoleApp.csproj", "{19748733-31D9-4381-8B76-8CAE12765F37}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionTests", "CollectionTests\CollectionTests.csproj", "{5F3DBD02-2DFD-467F-A174-5447673473ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CollectionTests", "CollectionTests\CollectionTests.csproj", "{5F3DBD02-2DFD-467F-A174-5447673473ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "List", "List\List.csproj", "{33B64B3A-FC90-4786-862D-A6E839492AB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "List", "List\List.csproj", "{33B64B3A-FC90-4786-862D-A6E839492AB4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListTests", "ListTests\ListTests.csproj", "{24A416F4-E45D-48AA-B66F-D478746CD3CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ListTests", "ListTests\ListTests.csproj", "{24A416F4-E45D-48AA-B66F-D478746CD3CF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Arr", "Arr", "{60F61E3E-ADCB-4CD6-8E59-DC9E3894CB8E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Collections", "Collections", "{B7665C89-7014-468D-8C43-8DD9035C11B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedList", "LinkedList\LinkedList.csproj", "{24D05F45-A747-4E3D-838C-C0562EDDB1E6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,9 +57,22 @@ Global
 		{24A416F4-E45D-48AA-B66F-D478746CD3CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24A416F4-E45D-48AA-B66F-D478746CD3CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24A416F4-E45D-48AA-B66F-D478746CD3CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24D05F45-A747-4E3D-838C-C0562EDDB1E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24D05F45-A747-4E3D-838C-C0562EDDB1E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24D05F45-A747-4E3D-838C-C0562EDDB1E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24D05F45-A747-4E3D-838C-C0562EDDB1E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B55B84B5-9DDE-496D-A056-40AFFE94DCC7} = {60F61E3E-ADCB-4CD6-8E59-DC9E3894CB8E}
+		{60D6DC78-3E27-43F2-B79A-0DAC55495708} = {60F61E3E-ADCB-4CD6-8E59-DC9E3894CB8E}
+		{53CF9163-9EFF-4F31-AFFC-BD4935471724} = {60F61E3E-ADCB-4CD6-8E59-DC9E3894CB8E}
+		{19748733-31D9-4381-8B76-8CAE12765F37} = {B7665C89-7014-468D-8C43-8DD9035C11B2}
+		{5F3DBD02-2DFD-467F-A174-5447673473ED} = {B7665C89-7014-468D-8C43-8DD9035C11B2}
+		{33B64B3A-FC90-4786-862D-A6E839492AB4} = {B7665C89-7014-468D-8C43-8DD9035C11B2}
+		{24A416F4-E45D-48AA-B66F-D478746CD3CF} = {B7665C89-7014-468D-8C43-8DD9035C11B2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A02F000A-B9EA-4708-B947-E39270466DCA}
