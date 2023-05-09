@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,15 +7,26 @@ using System.Threading.Tasks;
 
 namespace LinkedList.Singly
 {
-    public class SinglyLinkedList<T>
+    public partial class SinglyLinkedList<T> : IEnumerable<T>
     {
         // Auto-implemented propert
+        private int _count = 0;
         public SinglyLinkedListNode<T>? Head { get; set; }
+        public int Count => _count;
 
         public SinglyLinkedList()
         {
 
         }
+
+        public SinglyLinkedList(IEnumerable<T> collection)
+        {
+            foreach (var item in collection)
+            {
+                AddFirst(item);
+            }
+        }
+
 
         /// <summary>
         /// Bağlı listenin başına eleman ekler
@@ -32,11 +44,13 @@ namespace LinkedList.Singly
             if (Head is null)
             {
                 Head = node;
+                _count++;
                 return;
             }
 
             node.Next = Head;
             Head = node;
+            _count++;
             return;
         }
 
@@ -53,6 +67,7 @@ namespace LinkedList.Singly
             if (Head is null)
             {
                 Head = node;
+                _count++;
                 return;
             }
 
@@ -65,6 +80,7 @@ namespace LinkedList.Singly
                 current = current.Next;
             }
             prev.Next = node;
+            _count++;
             return;
         }
 
@@ -90,6 +106,7 @@ namespace LinkedList.Singly
                 {
                     newNode.Next = prev.Next;
                     prev.Next = newNode;
+                    _count++;
                     return;
                 }
                 prev = current;
@@ -106,7 +123,30 @@ namespace LinkedList.Singly
         /// <exception cref="NotImplementedException"></exception>
         public void AddAfter(SinglyLinkedListNode<T> node, T item)
         {
-            throw new NotImplementedException();
+            // throw new NotImplementedException();
+
+            SinglyLinkedListNode<T> new_node = new SinglyLinkedListNode<T>(item);
+
+            if (Head is null)
+            {
+                AddFirst(item);
+            }
+
+            var current = Head;
+            while (current is not null)
+            {
+                if (current.Equals(node))
+                {
+                    new_node.Next = current.Next;
+                    current.Next = new_node;
+                    _count++;
+                    return;
+                }
+
+                current = current.Next;
+            }
+
+            throw new Exception("The node could not be found in the linked list.");
         }
 
         /// <summary>
@@ -116,7 +156,18 @@ namespace LinkedList.Singly
         /// <returns></returns>
         public T RemoveFirst()
         {
-            throw new NotImplementedException();
+            // throw new NotImplementedException();
+
+            if (Head is null)
+            {
+                throw new Exception("Linked list is empty!");
+            }
+
+            T item = Head.Value;
+
+            Head = Head.Next;
+            _count--;
+            return item;
         }
 
         /// <summary>
@@ -126,7 +177,37 @@ namespace LinkedList.Singly
         /// <returns></returns>
         public T RemoveLast()
         {
-            throw new NotImplementedException();
+            // throw new NotImplementedException();
+
+            if (Head is null)
+            {
+                throw new Exception("Linked list is empty!");
+            }
+
+            var current = Head;
+
+            if (current.Next is null)
+            {
+                T item = current.Value;
+                Head = null;
+                _count--;
+                return item;
+            }
+
+            while (current is not null)
+            {
+                if (current.Next.Next is null)
+                {
+                    T item = current.Next.Value;
+                    current.Next = null;
+                    _count--;
+                    return item;
+                }
+
+                current = current.Next;
+            }
+
+            throw new Exception();
         }
 
         /// <summary>
@@ -139,7 +220,35 @@ namespace LinkedList.Singly
         /// <exception cref="NotImplementedException"></exception>
         public T Remove(SinglyLinkedListNode<T> node)
         {
-            throw new NotImplementedException();
+            if (Head is null)
+                throw new Exception("The linked list is empty!");
+
+            if (Head.Value.Equals(node.Value))
+                return RemoveFirst();
+
+            var current = Head;
+            while (current.Next != null)
+            {
+                if (current.Next.Value.Equals(node.Value))
+                {
+                    T item = node.Value;
+                    current.Next = current.Next.Next;
+                    _count--;
+                    return item;
+                }
+                current = current.Next;
+            }
+            throw new Exception("Node not found!");
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            return new SinglyLinkedListEnumerator<T>(Head);
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
     }
 }
