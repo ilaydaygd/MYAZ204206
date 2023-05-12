@@ -3,7 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructuresAlgorithms", "DataStructuresAlgorithms\DataStructuresAlgorithms.csproj", "{7AA934FD-2A53-4124-A666-3C08632BD3E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArrayConsoleApp", "DataStructuresAlgorithms\ArrayConsoleApp.csproj", "{7AA934FD-2A53-4124-A666-3C08632BD3E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionConsoleApp", "CollectionConsoleApp\CollectionConsoleApp.csproj", "{7D3B878A-1E98-4472-84F3-C3366DB151D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedListConsoleApp", "LinkedListConsoleApp\LinkedListConsoleApp.csproj", "{5A5B049A-60BE-4353-BE6C-ABFBEF076B05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecursiveApp", "RecursiveApp\RecursiveApp.csproj", "{3E878C73-359C-4088-BD7C-5893757F738B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortingAlgorithmsApp", "SortingAlgorithmsApp\SortingAlgorithmsApp.csproj", "{3AAEC549-4EED-4E85-A698-BA32522C6E9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigOWebApp", "BigOWebApp\BigOWebApp.csproj", "{950AD172-81F7-4FC5-A004-D1A06D139AAB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apps", "Apps", "{844828AA-C4BD-4AF9-9859-63E7329C5C70}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +27,37 @@ Global
 		{7AA934FD-2A53-4124-A666-3C08632BD3E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7AA934FD-2A53-4124-A666-3C08632BD3E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7AA934FD-2A53-4124-A666-3C08632BD3E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D3B878A-1E98-4472-84F3-C3366DB151D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D3B878A-1E98-4472-84F3-C3366DB151D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D3B878A-1E98-4472-84F3-C3366DB151D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D3B878A-1E98-4472-84F3-C3366DB151D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A5B049A-60BE-4353-BE6C-ABFBEF076B05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A5B049A-60BE-4353-BE6C-ABFBEF076B05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A5B049A-60BE-4353-BE6C-ABFBEF076B05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A5B049A-60BE-4353-BE6C-ABFBEF076B05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E878C73-359C-4088-BD7C-5893757F738B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E878C73-359C-4088-BD7C-5893757F738B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E878C73-359C-4088-BD7C-5893757F738B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E878C73-359C-4088-BD7C-5893757F738B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AAEC549-4EED-4E85-A698-BA32522C6E9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AAEC549-4EED-4E85-A698-BA32522C6E9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AAEC549-4EED-4E85-A698-BA32522C6E9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AAEC549-4EED-4E85-A698-BA32522C6E9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{950AD172-81F7-4FC5-A004-D1A06D139AAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{950AD172-81F7-4FC5-A004-D1A06D139AAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{950AD172-81F7-4FC5-A004-D1A06D139AAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{950AD172-81F7-4FC5-A004-D1A06D139AAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7AA934FD-2A53-4124-A666-3C08632BD3E9} = {844828AA-C4BD-4AF9-9859-63E7329C5C70}
+		{7D3B878A-1E98-4472-84F3-C3366DB151D7} = {844828AA-C4BD-4AF9-9859-63E7329C5C70}
+		{5A5B049A-60BE-4353-BE6C-ABFBEF076B05} = {844828AA-C4BD-4AF9-9859-63E7329C5C70}
+		{3E878C73-359C-4088-BD7C-5893757F738B} = {844828AA-C4BD-4AF9-9859-63E7329C5C70}
+		{3AAEC549-4EED-4E85-A698-BA32522C6E9A} = {844828AA-C4BD-4AF9-9859-63E7329C5C70}
+		{950AD172-81F7-4FC5-A004-D1A06D139AAB} = {844828AA-C4BD-4AF9-9859-63E7329C5C70}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {29F98F05-7F0D-4562-A973-CFB8D8AE4B31}
