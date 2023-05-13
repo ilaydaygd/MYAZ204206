@@ -1,6 +1,6 @@
 namespace ListTest
 {
-    public class UnitTest1
+    public class ListTests
     {
         [Fact]
         public void Test1()
